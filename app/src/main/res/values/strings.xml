@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CustomViewTest</string>
+
+    <string name="header_one">The view below is a CUSTOM view (created by me)</string>
+    <string name="header_two">The view below is created using an EditText and a Button</string>
+
 </resources>

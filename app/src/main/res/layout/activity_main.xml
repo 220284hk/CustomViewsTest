@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
+    <TextView
+        android:id="@+id/tv_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="click me"
-        android:id="@+id/button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/header_one"
+        android:textSize="20sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.hyunkwak.customviewtest.NotSpindleToggleButton
+        android:id="@+id/not_spindle_toggle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_one"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/not_spindle_toggle_button"
+        android:layout_marginTop="20dp"
+        android:text="@string/header_two"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_two"
+        android:layout_marginTop="20dp"
+        android:text="200dp edit text here" />
+
+    <Button
+        android:layout_toRightOf="@id/et"
+        android:text="Hello There"
+        android:layout_width="match_parent"
+        android:layout_alignBottom="@id/et"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
