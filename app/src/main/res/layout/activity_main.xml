@@ -38,6 +38,7 @@
         android:text="200dp edit text here" />
 
     <Button
+        android:id="@+id/bt_two"
         android:layout_toRightOf="@id/et"
         android:text="Hello There"
         android:layout_width="match_parent"
